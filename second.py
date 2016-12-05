@@ -4,3 +4,12 @@
 # If any problem raises with the file output, the function should not break, but return False.
 # Example: when called with the following two parameters: "tree.txt", "apple",
 # the function should write "appleappleapple" to the file "tree.txt", and return True.
+
+def string_to_file(filename, input_string):
+    try:
+        fw = open(filename, 'w')
+        fw.write(input_string*5)
+        fw.close()
+    except:
+        return False
+    return True
