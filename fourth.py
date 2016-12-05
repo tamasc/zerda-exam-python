@@ -20,8 +20,6 @@
 
 ################################################
 
-# The following code should work with the class:
-
 class Rocket():
 
     def __init__(self, name, fuel=0, number_of_launches=0):
@@ -52,6 +50,7 @@ class Rocket():
             self.fuel) + ", launches: " + str(self.number_of_launches)
         return stats
 
+# The following code should work with the class:
 
 falcon1 = Rocket('falcon1')
 returned_falcon9 = Rocket('falcon9', 11, 1)

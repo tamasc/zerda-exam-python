@@ -6,7 +6,7 @@ class Test_count_letter_in_string(unittest.TestCase):
     def setUp(self):
         self.test_string = 'aaaaaaaaaaab   aaaaaabaaaaaaaaakkkbaaaaaa6'
         self.test_empty_string = ''
-        self.test_list = [3, 'karalabe' ,3, 6, 4]
+        self.test_list = [3, 'karalabe', 3, 6, 4]
         self.test_int = 6
 
     def test_count_b_in_string(self):

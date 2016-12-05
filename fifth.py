@@ -21,8 +21,6 @@
 
 ################################################
 
-# The following code should work with the class:
-
 from fourth import Rocket
 
 class SpaceX():
@@ -54,6 +52,8 @@ class SpaceX():
         stats = "rockets: " + str(len(self.rockets)) + ", fuel: " + str(
             self.stored_fuel) + ", launches: " + str(self.number_of_launches)
         return stats
+
+# The following code should work with the class:
 
 space_x = SpaceX(100)
 falcon1 = Rocket('falcon1', 0, 0)
