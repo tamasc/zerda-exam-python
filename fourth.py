@@ -39,13 +39,13 @@ class Rocket():
 
     def refill(self):
         if self.name == "falcon1":
-            refilled_fuel = 5 - self.fuel
+            refilled_fuel = 5 - self.fuel           #can be a negative number
             self.fuel = self.fuel + refilled_fuel   #that is identical self.fuel = 5
-            return refilled_fuel                    #can be a negative number
+            return refilled_fuel
         elif self.name == "falcon9":
-            refilled_fuel = 20 - self.fuel
+            refilled_fuel = 20 - self.fuel          #can be a negative number
             self.fuel = self.fuel + refilled_fuel   #that is identical self.fuel = 9
-            return refilled_fuel                    #can be a negative number
+            return refilled_fuel
 
     def getStats(self):
         stats = "name: " + self.name + ", fuel: " + str(
@@ -59,5 +59,7 @@ returned_falcon9 = Rocket('falcon9', 11, 1)
 falcon1.refill() # 5
 falcon1.launch()
 
-print(falcon1.getStats()) # name: falcon1, fuel: 4, launches: 1
-print(returned_falcon9.getStats()) # name: falcon9, fuel: 11, launches: 1
+# commented out because of the fifth task!
+
+# print(falcon1.getStats()) # name: falcon1, fuel: 4, launches: 1
+# print(returned_falcon9.getStats()) # name: falcon9, fuel: 11, launches: 1
