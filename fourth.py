@@ -22,6 +22,37 @@
 
 # The following code should work with the class:
 
+class Rocket():
+
+    def __init__(self, name, fuel=0, number_of_launches=0):
+        self.name = name
+        self.fuel = fuel
+        self.number_of_launches = number_of_launches
+
+    def launch(self):
+        if self.name == "falcon1" and self.fuel >= 1:
+            self.number_of_launches += 1
+            self.fuel -= 1
+        elif self.name == "falcon9" and self.fuel >= 9:
+            self.number_of_launches += 1
+            self.fuel -= 9
+
+    def refill(self):
+        if self.name == "falcon1":
+            refilled_fuel = 5 - self.fuel
+            self.fuel = self.fuel + refilled_fuel   #that is identical self.fuel = 5
+            return refilled_fuel                    #can be a negative number
+        elif self.name == "falcon9":
+            refilled_fuel = 20 - self.fuel
+            self.fuel = self.fuel + refilled_fuel   #that is identical self.fuel = 9
+            return refilled_fuel                    #can be a negative number
+
+    def getStats(self):
+        stats = "name: " + self.name + ", fuel: " + str(
+            self.fuel) + ", launches: " + str(self.number_of_launches)
+        return stats
+
+
 falcon1 = Rocket('falcon1')
 returned_falcon9 = Rocket('falcon9', 11, 1)
 
