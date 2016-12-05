@@ -8,7 +8,7 @@
 def string_to_file(filename, input_string):
     try:
         fw = open(filename, 'w')
-        fw.write(input_string*5)
+        fw.write(input_string*10)
         fw.close()
     except:
         return False
